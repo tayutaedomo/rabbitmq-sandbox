@@ -2,6 +2,8 @@ version: '3.9'
 
 services:
   rabbitmq:
+    container_name: "rabbitmq"
+    hostname: ${RABBITMQ_HOSTNAME}
     image: "rabbitmq:3-management"
     ports:
       - "5672:5672"  # AMQP
@@ -9,3 +11,4 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER}
       RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS}
+      TZ: "Asia/Tokyo"

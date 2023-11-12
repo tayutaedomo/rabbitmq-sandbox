@@ -12,6 +12,7 @@
     "publish_hello": "poetry run python rabbitmq_sandbox/publish_hello.py",
     "subscribe_hello": "poetry run python rabbitmq_sandbox/subscribe_hello.py",
     "compose_up": "docker-compose -f docker/docker-compose.yml up -d",
+    "compose_down": "docker-compose -f docker/docker-compose.yml down",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
