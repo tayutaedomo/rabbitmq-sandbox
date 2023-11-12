@@ -1,0 +1,19 @@
+{
+  "name": "rabbitmq-sandbox",
+  "version": "0.1.0",
+  "description": "Try RabbitMQ with Python",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "run_rabbitmq": "docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management",
+    "open_admin": "open http://localhost:15672",
+    "publish_hello": "poetry run python rabbitmq_sandbox/publish_hello.py",
+    "subscribe_hello": "poetry run python rabbitmq_sandbox/subscribe_hello.py",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
