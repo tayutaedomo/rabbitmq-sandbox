@@ -11,6 +11,8 @@
     "open_admin": "open http://localhost:15672",
     "publish_hello": "poetry run python rabbitmq_sandbox/publish_hello.py",
     "subscribe_hello": "poetry run python rabbitmq_sandbox/subscribe_hello.py",
+    "publish_auto_act": "poetry run python rabbitmq_sandbox/publish_auto_act.py",
+    "subscribe_auto_act": "poetry run python rabbitmq_sandbox/subscribe_auto_act.py",
     "compose_up": "docker-compose -f docker/docker-compose.yml up -d",
     "compose_down": "docker-compose -f docker/docker-compose.yml down",
     "test": "poetry run pytest"
