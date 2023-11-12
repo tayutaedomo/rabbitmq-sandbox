@@ -13,6 +13,7 @@
     "subscribe_hello": "poetry run python rabbitmq_sandbox/subscribe_hello.py",
     "publish_auto_act": "poetry run python rabbitmq_sandbox/publish_auto_act.py",
     "subscribe_auto_act": "poetry run python rabbitmq_sandbox/subscribe_auto_act.py",
+    "subscribe_auto_act_2": "poetry run python rabbitmq_sandbox/subscribe_auto_act_requeue.py",
     "compose_up": "docker-compose -f docker/docker-compose.yml up -d",
     "compose_down": "docker-compose -f docker/docker-compose.yml down",
     "test": "poetry run pytest"
