@@ -16,6 +16,8 @@
     "publish:auto_act": "poetry run python rabbitmq_sandbox/publish_auto_act.py",
     "subscribe:auto_act": "poetry run python rabbitmq_sandbox/subscribe_auto_act.py",
     "subscribe:auto_act:2": "poetry run python rabbitmq_sandbox/subscribe_auto_act_requeue.py",
+    "publish:max_len": "poetry run python rabbitmq_sandbox/publish_max_len.py",
+    "subscribe:max_len": "poetry run python rabbitmq_sandbox/subscribe_max_len.py",
     "test": "poetry run pytest",
     "test:mq": "poetry run pytest tests/test_rabbitmq.py",
     "test:mock": "poetry run pytest tests/test_rabbitmq_mock.py"

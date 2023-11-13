@@ -22,5 +22,9 @@ RabbitMQ と Python を使った検証
 - [x] TTL でのメッセージの削除
 - [x] 手動 ACT でのキューへの再登録とリトライ上限
   - `npm run publish:auto_act "raise_error"`
-  - `npm run subscribe:auto_act:2 "raise_error"`
-- [ ] Maxlen でのキューの登録上限
+  - `npm run subscribe:auto_act:2`
+- [x] Maxlen でのキューの登録上限
+  - `npm run publish:max_len "message1"`
+  - `npm run publish:max_len "message2"`
+  - `npm run publish:max_len "message3"`
+  - `npm run subscribe:max_len`
