@@ -28,3 +28,4 @@ RabbitMQ と Python を使った検証
   - `npm run publish:max_len "message2"`
   - `npm run publish:max_len "message3"`
   - `npm run subscribe:max_len`
+- [x] GitHub Actions での pytest 実行
