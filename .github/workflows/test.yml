@@ -29,6 +29,15 @@ jobs:
     - name: Start RabbitMQ with Docker Compose
       run: docker-compose -f docker/docker-compose.yml up -d
 
+    - name: Wait for RabbitMQ to become ready
+      run: |
+        echo "Waiting for RabbitMQ to become ready..."
+        until $(curl --output /dev/null --silent --head --fail http://localhost:15672); do
+          printf '.'
+          sleep 3
+        done
+        echo "RabbitMQ is up and running!"
+
     - name: Run tests
       run: poetry run pytest
 
