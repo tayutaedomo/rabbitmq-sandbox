@@ -25,4 +25,4 @@ if __name__ == "__main__":
     parser.add_argument("message", nargs='?', default="default_message", help="Message to send")
     args = parser.parse_args()
 
-    send_message("auto_act", args.message)
+    send_message("auto_ack", args.message)

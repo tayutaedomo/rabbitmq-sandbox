@@ -14,19 +14,19 @@ RabbitMQ と Python を使った検証
   - `npm run test:mq`
 - [x] モックを使った pytest
   - `npm run test:mock`
-- [x] 手動 ACT での subscribe
+- [x] 手動 ACK での subscribe
   - 未確認メッセージの発生と確認
-  - `npm run publish:auto_act "message"`
-  - `npm run publish:auto_act "raise_error"`
-  - `npm run subscribe_auto_act`
+  - `npm run publish:auto_ack "message"`
+  - `npm run publish:auto_ack "raise_error"`
+  - `npm run subscribe:auto_ack`
 - [x] TTL でのメッセージの削除
-- [x] 手動 ACT でのメッセージの nack とキューへの再登録とリトライ上限
-  - `npm run publish:auto_act "raise_error"`
-  - `npm run subscribe:auto_act:2`
-- [x] 手動 ACT でのメッセージの reject とキューへの再登録とリトライ上限
-  - `npm run publish:auto_act "raise_error"`
-  - `npm run subscribe:auto_act:3`
-- [x] Maxlen でのキューの登録上限
+- [x] 手動 ACK でのメッセージの nack とキューへの再登録とリトライ上限
+  - `npm run publish:auto_ack "raise_error"`
+  - `npm run subscribe:auto_ack:2`
+- [x] 手動 ACK でのメッセージの reject とキューへの再登録とリトライ上限
+  - `npm run publish:auto_ack "raise_error"`
+  - `npm run subscribe:auto_ack:3`
+- [x] Max length でのキューの登録上限
   - `npm run publish:max_len "message1"`
   - `npm run publish:max_len "message2"`
   - `npm run publish:max_len "message3"`

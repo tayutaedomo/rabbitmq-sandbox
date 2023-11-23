@@ -35,4 +35,4 @@ def subscribe(queue_name):
 
 
 if __name__ == "__main__":
-    subscribe("auto_act")
+    subscribe("auto_ack")
