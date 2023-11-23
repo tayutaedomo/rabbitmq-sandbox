@@ -1,6 +1,30 @@
 # rabbitmq-sandbox
 RabbitMQ と Python を使った検証
 
+## 必要なもの
+- Node.js
+- Docker/Docker Compose
+- Python/Poetry
+- direnv
+
+## セットアップ
+### git clone
+```bash
+$ git clone git@github.com:tayutaedomo/rabbitmq-sandbox.git
+$ cd rabbitmq-sandbox
+```
+
+### 環境変数
+```bash
+$ cp .env.sample .env
+$ direnv allow .
+```
+
+### Poetry
+```bash
+$ poetry install
+```
+
 ## 試したこと
 - [x] docker (docker-compose) での RabbitMQ の起動
   - `npm run compose:up`
