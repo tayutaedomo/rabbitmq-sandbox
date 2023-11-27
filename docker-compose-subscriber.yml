@@ -6,12 +6,22 @@ services:
     image: "rabbitmq-subscriber"
     build:
       dockerfile: docker/subscriber/Dockerfile
+    init: true
     environment:
       RABBITMQ_HOST: "rabbitmq"
     depends_on:
       - rabbitmq
     networks:
       - mq-network
+    restart: always
+    healthcheck:
+      # TODO: pgrep だけではプロセスがハングアップしている状態までは検知できない
+      test: ["CMD-SHELL", "pgrep -f subscribe_auto_ack_docker.py || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
 
 networks:
   mq-network:

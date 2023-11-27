@@ -60,3 +60,5 @@ $ poetry install
   - `npm run compose:up`
   - `npm run compose:subscriber:up`
   - `npm run publish:auto_ack_docker "message"`
+- [x] subscriber のヘルスチェック
+  - pgrep ではプロセスがハングアップしていないかどうかまでは確認できない。
