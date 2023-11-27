@@ -56,3 +56,7 @@ $ poetry install
   - `npm run publish:max_len "message3"`
   - `npm run subscribe:max_len`
 - [x] GitHub Actions での pytest 実行
+- [x] docker コンテナで subscribe を起動
+  - `npm run compose:up`
+  - `npm run compose:subscriber:up`
+  - `npm run publish:auto_ack_docker "message"`

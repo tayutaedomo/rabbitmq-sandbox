@@ -12,3 +12,9 @@ services:
       RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER}
       RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS}
       TZ: "Asia/Tokyo"
+    networks:
+      - mq-network
+
+networks:
+  mq-network:
+    driver: bridge

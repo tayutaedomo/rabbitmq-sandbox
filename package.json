@@ -8,8 +8,8 @@
   },
   "scripts": {
     "run:rabbitmq": "docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management",
-    "compose:up": "docker-compose -f docker/docker-compose.yml up -d",
-    "compose:down": "docker-compose -f docker/docker-compose.yml down",
+    "compose:up": "docker-compose -f docker-compose.yml up -d",
+    "compose:down": "docker-compose -f docker-compose.yml down",
     "open:admin": "open http://localhost:15672",
     "publish:hello": "poetry run python rabbitmq_sandbox/publish_hello.py",
     "subscribe:hello": "poetry run python rabbitmq_sandbox/subscribe_hello.py",
@@ -19,6 +19,10 @@
     "subscribe:auto_ack:3": "poetry run python rabbitmq_sandbox/subscribe_auto_ack_reject.py",
     "publish:max_len": "poetry run python rabbitmq_sandbox/publish_max_len.py",
     "subscribe:max_len": "poetry run python rabbitmq_sandbox/subscribe_max_len.py",
+    "compose:subscriber:build": "docker-compose -f docker-compose.yml -f docker-compose-subscriber.yml build",
+    "compose:subscriber:up": "docker-compose -f docker-compose.yml -f docker-compose-subscriber.yml up -d subscriber",
+    "compose:subscriber:down": "docker-compose -f docker-compose.yml -f docker-compose-subscriber.yml down subscriber",
+    "publish:auto_ack_docker": "poetry run python rabbitmq_sandbox/publish_auto_ack_docker.py",
     "test": "poetry run pytest",
     "test:mq": "poetry run pytest tests/test_rabbitmq.py",
     "test:mock": "poetry run pytest tests/test_rabbitmq_mock.py"

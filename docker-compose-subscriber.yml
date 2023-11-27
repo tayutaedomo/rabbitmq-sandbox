@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  subscriber:
+    container_name: "subscriber"
+    image: "rabbitmq-subscriber"
+    build:
+      dockerfile: docker/subscriber/Dockerfile
+    environment:
+      RABBITMQ_HOST: "rabbitmq"
+    depends_on:
+      - rabbitmq
+    networks:
+      - mq-network
+
+networks:
+  mq-network:
+    driver: bridge
