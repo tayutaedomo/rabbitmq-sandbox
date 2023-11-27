@@ -27,9 +27,9 @@ $ poetry install
 
 ## 試したこと
 - [x] docker (docker-compose) での RabbitMQ の起動
-  - `npm run compose:up`
-  - `npm run open:admin`
-  - `npm run compose:down`
+  - `npm run rabbitmq:up`
+  - `npm run admin:open`
+  - `npm run rabbitmq:down`
 - [x] poetry 環境の構築
 - [x] シンプルな publish & subscribe
   - `npm run publish:hello`
@@ -57,8 +57,11 @@ $ poetry install
   - `npm run subscribe:max_len`
 - [x] GitHub Actions での pytest 実行
 - [x] docker コンテナで subscribe を起動
-  - `npm run compose:up`
-  - `npm run compose:subscriber:up`
-  - `npm run publish:auto_ack_docker "message"`
+  - `npm run subscriber:up`
+  - `npm run subscriber:publish "message"`
+  - `npm run subscriber:down`
 - [x] subscriber のヘルスチェック
   - pgrep ではプロセスがハングアップしていないかどうかまでは確認できない。
+- [x] キューのメッセージ数を確認するコマンド
+  - `subscriber:count:grep`
+  - `subscriber:count:jq`
