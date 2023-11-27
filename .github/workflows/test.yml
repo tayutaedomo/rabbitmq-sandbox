@@ -27,7 +27,7 @@ jobs:
         poetry install
 
     - name: Start RabbitMQ with Docker Compose
-      run: docker-compose -f docker/docker-compose.yml up -d
+      run: docker-compose -f docker-compose.yml up -d
 
     - name: Wait for RabbitMQ to become ready
       run: |
@@ -42,4 +42,4 @@ jobs:
       run: poetry run pytest
 
     - name: Shutdown RabbitMQ
-      run: docker-compose -f docker/docker-compose.yml down
+      run: docker-compose -f docker-compose.yml down
